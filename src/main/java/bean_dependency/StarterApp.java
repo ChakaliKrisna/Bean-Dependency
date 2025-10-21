@@ -20,12 +20,26 @@ import org.springframework.web.context.WebApplicationContext;
 public class StarterApp  {
 	
 	public static void main(String[] args) {
-SpringApplication springapplication =new SpringApplication(Appconfig.class);
+//SpringApplication springapplication =new SpringApplication(Appconfig.class);
+//		AnnotationConfigApplicationContext context=new AnnotationConfigApplicationContext(Appconfig.class);
 		
-		ConfigurableApplicationContext container = springapplication.run(args);
+		
+		
+//		ConfigurableApplicationContext container = springapplication.run(args);
 		
 //		AnnotationConfigApplicationContext container1=new AnnotationConfigApplicationContext ();
 		System.out.println("hello");
+		
+		Person p=new Person();
+		System.out.println(p);
+		Student s=new Student();
+		s.setAddress(p.getAddress());
+		s.setName(p.getName());
+		
+		System.out.println(s);
+		
+		
+		
        
     }
 
