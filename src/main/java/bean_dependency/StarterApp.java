@@ -49,8 +49,8 @@ public class StarterApp  {
 		
 		
 	AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(Appconfig.class) ;
-			PrintStudentInfo printstudentinfo=context.getBean(PrintStudentInfo.class);
-			printstudentinfo.printstudentinfo();
+			Film film=context.getBean(Film.class);
+			film.startFilm();
 		
 		
 		
