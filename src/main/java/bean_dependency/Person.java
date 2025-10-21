@@ -9,7 +9,7 @@ public class Person {
 		Name = name;
 	}
 	public String getAddress() {
-		return address="hyd";
+		return address;
 	}
 	@Override
 	public String toString() {
@@ -18,7 +18,7 @@ public class Person {
 	public void setAddress(String address) {
 		this.address = address;
 	}
-	private String address;
+	private String address="hyd";
 	
 	
 

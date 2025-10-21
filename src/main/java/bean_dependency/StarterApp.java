@@ -1,4 +1,5 @@
 package bean_dependency;
+import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -33,14 +34,16 @@ public class StarterApp  {
 		Person p=new Person();
 		System.out.println(p);
 		Student s=new Student();
-		s.setAddress(p.getAddress());
-		s.setName(p.getName());
-		
+//		s.setAddress(p.getAddress());
+//		s.setName(p.getName());
+//		
+//		
+//		
+//		ModelMapper modelmapper= new ModelMapper();
+//		modelmapper.map(p,s);
+//		
+//		
 		System.out.println(s);
-		
-		
-		
-       
     }
 
 	
