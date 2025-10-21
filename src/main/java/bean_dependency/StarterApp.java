@@ -1,5 +1,6 @@
 package bean_dependency;
 import org.modelmapper.ModelMapper;
+import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -22,7 +23,7 @@ public class StarterApp  {
 	
 	public static void main(String[] args) {
 //SpringApplication springapplication =new SpringApplication(Appconfig.class);
-//		AnnotationConfigApplicationContext context=new AnnotationConfigApplicationContext(Appconfig.class);
+		
 		
 		
 		
@@ -30,20 +31,36 @@ public class StarterApp  {
 		
 //		AnnotationConfigApplicationContext container1=new AnnotationConfigApplicationContext ();
 		System.out.println("hello");
+//		
+//		Person p=new Person();
+//		System.out.println(p);
+//		Student s=new Student();
+////		s.setAddress(p.getAddress());
+////		s.setName(p.getName());
+////		
+////		
+////		
+////		ModelMapper modelmapper= new ModelMapper();
+////		modelmapper.map(p,s);
+////		
+////		
+//		System.out.println(s);
 		
-		Person p=new Person();
-		System.out.println(p);
-		Student s=new Student();
-//		s.setAddress(p.getAddress());
-//		s.setName(p.getName());
-//		
-//		
-//		
-//		ModelMapper modelmapper= new ModelMapper();
-//		modelmapper.map(p,s);
-//		
-//		
-		System.out.println(s);
+		
+		
+	AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(Appconfig.class) ;
+			PrintStudentInfo printstudentinfo=context.getBean(PrintStudentInfo.class);
+			printstudentinfo.printstudentinfo();
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
     }
 
 	

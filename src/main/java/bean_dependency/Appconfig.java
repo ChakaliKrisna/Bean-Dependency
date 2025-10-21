@@ -1,5 +1,7 @@
 package bean_dependency;
 
+import org.modelmapper.ModelMapper;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
@@ -7,8 +9,10 @@ import org.springframework.context.annotation.Configuration;
 @ComponentScan
 public class Appconfig{
 
-	
-	
+@Bean
+public ModelMapper modelmapper() {
+	return new ModelMapper();
+}
 	
 
 	

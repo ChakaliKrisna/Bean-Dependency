@@ -1,5 +1,8 @@
 package bean_dependency;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class Person {
 	private String Name="krishna";
 	public String getName() {
